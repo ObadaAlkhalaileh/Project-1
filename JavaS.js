@@ -6,5 +6,5 @@ hey.innerHTML = 'heeeey'
 let b = document.querySelector("body")
 
 const changeColor = () => {
-    button.style.color = "red"
+    button.style.backgroundColor = "red"
 }
