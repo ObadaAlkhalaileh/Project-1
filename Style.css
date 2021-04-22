@@ -1,0 +1,19 @@
+#maind {
+    height: 750px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    border: solid;
+    justify-content: center;
+    align-content: center;
+}
+
+.square {
+    height: 150px;
+    width: 150px;
+    border: solid;
+}
+
+.square:active {
+    background-image: inherit;
+}
