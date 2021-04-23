@@ -13,3 +13,13 @@
     width: 150px;
     border: solid;
 }
+
+#p1,
+#p2 {
+    position: absolute;
+    display: none;
+    bottom: 330px;
+    left: 50%;
+    margin-left: -100px;
+    color: gold;
+}

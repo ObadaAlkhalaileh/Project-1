@@ -1,11 +1,16 @@
 let b = document.querySelector("body")
-
+let imgCounter = 0
 const changeColor = (x) => {
 
-    if (x.style.backgroundColor === "white") {
-        x.style.backgroundColor = "green"
+    if (imgCounter % 2 === 0) {
+
+        x.style.backgroundImage = "url('broasted.png')"
+        x.style.backgroundSize = "150px 150px"
+        imgCounter++
     } else {
-        x.style.backgroundColor = "white"
+        x.style.backgroundImage = "url('shawerma.png')"
+        x.style.backgroundSize = "150px 150px"
+        imgCounter++
     }
 
 }
@@ -36,13 +41,12 @@ const checkWinner = () => {
         if (player1.sort().join("").includes(elem.join("")) /*player1 has one of the 3 numbers in win array*/ ) {
             /*alert that player 1 has won (or a big picture ) */
             /*with sound effect */
-            b.append("Player1 Has WON")
+            p1.style.display = "block"
         }
         if (player2.sort().join("").includes(elem.join("")) /*player2 has one of the 3 numbers in win array*/ ) {
             /*alert that player 2 has won (or a big picture ) */
             /*with sound effect */
-            b.append("Player2 Has WON")
+            p2.style.display = "block"
         }
     })
-
 }
