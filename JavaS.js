@@ -5,6 +5,6 @@ hey.innerHTML = 'heeeey'
 
 let b = document.querySelector("body")
 
-const changeColor = () => {
-    b1.style.backgroundColor = "red"
+const changeColor = (x) => {
+    x.style.backgroundColor = "red"
 }
