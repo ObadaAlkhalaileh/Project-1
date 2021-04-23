@@ -1,6 +1,6 @@
 let b = document.querySelector("body")
 let imgCounter = 0
-const changeColor = (x) => {
+const changeImage = (x) => {
 
     if (imgCounter % 2 === 0) {
 
