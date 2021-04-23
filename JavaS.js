@@ -10,6 +10,14 @@ const changeColor = (x) => {
 
 }
 const player1 = []
+const player2 = []
+let counter = 0
 const addIdToP1 = (x) => {
-    player1.push(x)
+    if (counter % 2 === 0) {
+        player1.push(x)
+
+    } else {
+        player2.push(x)
+    }
+    counter++
 }
