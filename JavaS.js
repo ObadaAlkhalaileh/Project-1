@@ -1,4 +1,4 @@
-const button = document.querySelector(".square")
+const b1 = document.querySelector("#b1")
 
 let hey = document.createElement("h1")
 hey.innerHTML = 'heeeey'
@@ -6,5 +6,5 @@ hey.innerHTML = 'heeeey'
 let b = document.querySelector("body")
 
 const changeColor = () => {
-    button.style.backgroundColor = "red"
+    b1.style.backgroundColor = "red"
 }
