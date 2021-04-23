@@ -6,5 +6,10 @@ hey.innerHTML = 'heeeey'
 let b = document.querySelector("body")
 
 const changeColor = (x) => {
-    x.style.backgroundColor = "red"
+
+    if (x.style.backgroundColor === "white") {
+        x.style.backgroundColor = "green"
+    } else {
+        x.style.backgroundColor = "white"
+    }
 }
