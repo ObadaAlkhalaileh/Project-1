@@ -1,8 +1,3 @@
-const b1 = document.querySelector("#b1")
-
-let hey = document.createElement("h1")
-hey.innerHTML = 'heeeey'
-
 let b = document.querySelector("body")
 
 const changeColor = (x) => {
@@ -12,4 +7,9 @@ const changeColor = (x) => {
     } else {
         x.style.backgroundColor = "white"
     }
+
+}
+const player1 = []
+const addIdToP1 = (x) => {
+    player1.push(x)
 }

@@ -13,7 +13,3 @@
     width: 150px;
     border: solid;
 }
-
-.square:active {
-    background-image: inherit;
-}
