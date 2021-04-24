@@ -1,4 +1,9 @@
+function clickSound() {
+    click.play()
+}
+
 const sure = () => {
+
     document.getElementById("cont").style.visibility = 'visible'
     document.getElementById("start").style.visibility = 'hidden'
 

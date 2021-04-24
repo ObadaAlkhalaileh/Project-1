@@ -1,19 +1,70 @@
+function clickSound() {
+    click.play()
+}
 let b = document.querySelector("body")
 let imgCounter = 0
 const changeImage = (event) => {
 
     if (imgCounter % 2 === 0) {
 
-        event.target.style.backgroundImage = "url('broasted.png')"
+        event.target.style.backgroundImage = p1Char.url
         event.target.style.backgroundSize = "150px 150px"
         imgCounter++
     } else {
-        event.target.style.backgroundImage = "url('shawerma.png')"
+        event.target.style.backgroundImage = p2Char.url
         event.target.style.backgroundSize = "150px 150px"
         imgCounter++
     }
 
 }
+let p1Char = {}
+let p2Char = {}
+
+const broasted = {
+    name: "broasted",
+    url: "url('broasted.png')"
+}
+const shawerma = {
+    name: "shawerma",
+    url: "url('shawerma.png')"
+}
+const burger = {
+    name: "burger",
+    url: "url('burger.jpg')"
+}
+const zinger = {
+    name: "zinger",
+    url: "url('zinger.jfif')"
+}
+const fajita = {
+    name: "fajita",
+    url: "url('fajita.png')"
+}
+const mansaf = {
+    name: "mansaf",
+    url: "url('mansaf.jpg')"
+}
+
+
+const charPick = (event) => {
+    if (nameCounter === 0) {
+        p1Char = event
+
+        Player1Char.style.backgroundImage = p1Char.url
+        Player1Char.style.backgroundSize = "400px 400px"
+        Player1Char.style.visibility = "visible"
+        player1Chars.style.visibility = "hidden"
+        nameCounter++
+    }
+    if (nameCounter === 1) {
+        p2Char = event
+
+    }
+
+}
+
+
+
 const player1 = []
 const player2 = []
 let counter = 0
