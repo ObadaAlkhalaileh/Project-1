@@ -56,20 +56,30 @@ button {
     margin-left: -100px;
     height: 60px;
     width: 200px;
+    box-shadow: 3px 3px 5px white;
 }
 
 a {
     position: relative;
     left: 50%;
-    margin-left: -230px;
+    margin-left: -185px;
     height: 60px;
     width: 200px;
-    border: red solid;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 60px;
     padding-right: 70px;
     text-decoration: solid;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: fantasy;
+    color: black;
+}
+
+#start {
+    position: absolute;
+    left: 48px;
+    top: -28px;
     font-size: 35px;
     font-weight: bold;
     font-family: fantasy;

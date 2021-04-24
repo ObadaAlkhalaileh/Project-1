@@ -10,13 +10,22 @@
 <body background="./ramadan2.gif">
     <h1>X O Ramadan Edition</h1>
     <h2 id="are">Are You Ready?!</h2>
-    <h2 id="hun">or HUNGRY??</h2>
-    <hr>
-    <h3 id="think">think again...</h3>
+    <h2 id="hun" style="visibility: hidden;">or HUNGRY??</h2>
+    <hr id="hr" style="visibility: hidden;">
+    <h3 id="think" style="visibility: hidden;">think again...</h3>
 
 
-    <button>START<a href="./index.html">START</a> </button>
+    <button onclick="sure()">
+        <p id="start" style="visibility: visible;"> START</p><a id="cont" href="./index.html"
+            style="visibility: hidden ;">SURE?</a>
+    </button>
 
+    <audio id="bgsound">
+
+        <source src="./RamadanM.mp3">
+
+    </audio>
+    <button onclick="playSound()"> play</button>
 
 
 
