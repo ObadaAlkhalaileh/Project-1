@@ -28,4 +28,4 @@ const thinkV = () => {
 }
 
 const playSound = () => bgsound.play();
-setTimeout(playSound, 1000)
+const pauseSound = () => bgsound.pause();

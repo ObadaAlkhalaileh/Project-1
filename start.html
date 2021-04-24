@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="./start-style.css">
     <title>Welcome</title>
+
 </head>
 
 <body background="./ramadan2.gif">
@@ -15,7 +16,7 @@
     <h3 id="think" style="visibility: hidden;">think again...</h3>
 
 
-    <button onclick="sure()">
+    <button class="startButton" onclick="sure()">
         <p id="start" style="visibility: visible;"> START</p><a id="cont" href="./index.html"
             style="visibility: hidden ;">SURE?</a>
     </button>
@@ -25,8 +26,10 @@
         <source src="./RamadanM.mp3">
 
     </audio>
-    <button onclick="playSound()"> play</button>
-
+    <div class="soundControl">
+        <button class="pp" onclick="playSound()"> play</button>
+        <button class="pp" onclick="pauseSound()"> pause</button>
+    </div>
 
 
 

@@ -1,9 +1,6 @@
 body {
-    background-color: blanchedalmond;
-    background-image: url("./ramadan2.gif");
+    background-size: 100% 800px;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 #maind {
@@ -16,16 +13,16 @@ body {
     display: grid;
     grid-template-columns: 150px 150px 150px;
     grid-template-rows: 150px 150px 150px;
-    border: solid;
     justify-content: center;
     align-content: center;
-    background-color: white;
 }
 
 .square {
     height: 150px;
     width: 150px;
-    border: solid;
+    border: solid 2px;
+    border-radius: 20%;
+    background-color: white;
 }
 
 #p1,
@@ -35,5 +32,14 @@ body {
     top: 20px;
     left: 50%;
     margin-left: -130px;
-    color: black;
+    color: white;
+}
+
+#p3 {
+    position: absolute;
+    display: none;
+    top: 20px;
+    left: 50%;
+    margin-left: -45px;
+    color: white;
 }

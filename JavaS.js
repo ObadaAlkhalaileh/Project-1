@@ -48,5 +48,22 @@ const checkWinner = () => {
             /*with sound effect */
             p2.style.display = "block"
         }
+        if (player1.length === 5) {
+            p3.style.display = "block"
+        }
     })
+}
+
+let player1Name = ""
+let player2Name = ""
+let nameCounter = 0
+const pickName = (event) => {
+    if (nameCounter === 0) {
+        player1Name = event.target.id
+        nameCounter++
+    }
+    if (nameCounter === 1) {
+        player2Name = event.target.id
+
+    }
 }
