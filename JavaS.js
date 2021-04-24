@@ -1,15 +1,15 @@
 let b = document.querySelector("body")
 let imgCounter = 0
-const changeImage = (x) => {
+const changeImage = (event) => {
 
     if (imgCounter % 2 === 0) {
 
-        x.style.backgroundImage = "url('broasted.png')"
-        x.style.backgroundSize = "150px 150px"
+        event.target.style.backgroundImage = "url('broasted.png')"
+        event.target.style.backgroundSize = "150px 150px"
         imgCounter++
     } else {
-        x.style.backgroundImage = "url('shawerma.png')"
-        x.style.backgroundSize = "150px 150px"
+        event.target.style.backgroundImage = "url('shawerma.png')"
+        event.target.style.backgroundSize = "150px 150px"
         imgCounter++
     }
 
@@ -17,24 +17,24 @@ const changeImage = (x) => {
 const player1 = []
 const player2 = []
 let counter = 0
-const addIdToP1 = (x) => {
+const addIdToP1 = (event) => {
     if (counter % 2 === 0) {
-        player1.push(x)
+        player1.push(event.target.id)
 
     } else {
-        player2.push(x)
+        player2.push(event.target.id)
     }
     counter++
 }
 const win = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [1, 4, 7],
-    [2, 5, 8],
-    [3, 6, 9],
-    [1, 5, 9],
-    [3, 5, 7]
+    ['b1', 'b2', 'b3'],
+    ['b4', 'b5', 'b6'],
+    ['b7', 'b8', 'b9'],
+    ['b1', 'b4', 'b7'],
+    ['b2', 'b5', 'b8'],
+    ['b3', 'b6', 'b9'],
+    ['b1', 'b5', 'b9'],
+    ['b3', 'b5', 'b7']
 ]
 const checkWinner = () => {
     win.forEach(function(elem, i) {

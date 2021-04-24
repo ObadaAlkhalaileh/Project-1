@@ -1,5 +1,9 @@
 body {
     background-color: blanchedalmond;
+    background-image: url("./ramadan2.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #maind {
