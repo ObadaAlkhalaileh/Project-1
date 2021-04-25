@@ -6,13 +6,19 @@ let imgCounter = 0
 const changeImage = (event) => {
 
     if (imgCounter % 2 === 0) {
+        let image1 = document.createElement('img')
+        image1.src = p1Char.url
+        image1.width = "150"
+        image1.height = "150"
+        event.target.append(image1)
 
-        event.target.style.backgroundImage = p1Char.url
-        event.target.style.backgroundSize = "150px 150px"
         imgCounter++
     } else {
-        event.target.style.backgroundImage = p2Char.url
-        event.target.style.backgroundSize = "150px 150px"
+        let image2 = document.createElement('img')
+        image2.src = p2Char.url
+        image2.width = "150"
+        image2.height = "150"
+        event.target.append(image2)
         imgCounter++
     }
 
@@ -21,49 +27,65 @@ let p1Char = {}
 let p2Char = {}
 
 const broasted = {
-    name: "broasted",
-    url: "url('broasted.png')"
+    name: "BROASTED",
+    url: 'broasted.png'
 }
 const shawerma = {
-    name: "shawerma",
-    url: "url('shawerma.png')"
+    name: "SHAWERMA",
+    url: 'shawerma.png'
 }
 const burger = {
-    name: "burger",
-    url: "url('burger.jpg')"
+    name: "BURGER",
+    url: 'burger.png'
 }
 const zinger = {
-    name: "zinger",
-    url: "url('zinger.jfif')"
+    name: "ZINGER",
+    url: 'zinger.png'
 }
 const fajita = {
-    name: "fajita",
-    url: "url('fajita.png')"
+    name: "FAJITA",
+    url: 'fajita.png'
 }
 const mansaf = {
-    name: "mansaf",
-    url: "url('mansaf.jpg')"
+    name: "MANSAF",
+    url: 'mansaf.png'
 }
 
-
+let nameCounter = 0
 const charPick = (event) => {
-    if (nameCounter === 0) {
-        p1Char = event
+        if (nameCounter === 0) {
+            p1Char = event
+            let image3 = document.createElement('img')
+            image3.src = p1Char.url
+            image3.width = "400"
+            image3.height = "400"
+            Player1Char.append(image3)
 
-        Player1Char.style.backgroundImage = p1Char.url
-        Player1Char.style.backgroundSize = "400px 400px"
-        Player1Char.style.visibility = "visible"
-        player1Chars.style.visibility = "hidden"
-        nameCounter++
-    }
-    if (nameCounter === 1) {
-        p2Char = event
+            Player1Char.style.visibility = "visible"
+            player1Chars.style.visibility = "hidden"
+            nameCounter = 1
+        } else if (nameCounter === 1) {
+            p2Char = event
+            let image4 = document.createElement('img')
+            image4.src = p2Char.url
+            image4.width = "400"
+            image4.height = "400"
+            Player2Char.append(image4)
+
+            Player2Char.style.visibility = "visible"
+            player2Chars.style.visibility = "hidden"
+            nameCounter = undefined
+        }
 
     }
+    //need revise(not essential function)
+const revretSelection = () => {
+    //when click on final pick it hide it and remove player 1 selection to start the proccedure again
+    Player1Char.style.visibility = "hidden"
+    player1Chars.style.visibility = "visible"
+    p1Char = {}
 
 }
-
-
 
 const player1 = []
 const player2 = []
@@ -87,34 +109,27 @@ const win = [
     ['b1', 'b5', 'b9'],
     ['b3', 'b5', 'b7']
 ]
+
+
+//WIN FUNCTION
 const checkWinner = () => {
     win.forEach(function(elem, i) {
         if (player1.sort().join("").includes(elem.join("")) /*player1 has one of the 3 numbers in win array*/ ) {
             /*alert that player 1 has won (or a big picture ) */
             /*with sound effect */
+
             p1.style.display = "block"
+            p1.innerText = p1Char.name + "  FOREVER"
         }
         if (player2.sort().join("").includes(elem.join("")) /*player2 has one of the 3 numbers in win array*/ ) {
             /*alert that player 2 has won (or a big picture ) */
             /*with sound effect */
+
             p2.style.display = "block"
+            p2.innerText = p1Char.name + "  FOREVER"
         }
         if (player1.length === 5) {
             p3.style.display = "block"
         }
     })
-}
-
-let player1Name = ""
-let player2Name = ""
-let nameCounter = 0
-const pickName = (event) => {
-    if (nameCounter === 0) {
-        player1Name = event.target.id
-        nameCounter++
-    }
-    if (nameCounter === 1) {
-        player2Name = event.target.id
-
-    }
 }
