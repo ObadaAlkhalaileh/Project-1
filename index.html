@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="./Style.css">
 </head>
 
-<body background="./ramadan0.jpg">
+<body background="./ramadan0.jpg" id="demo">
     <div id="maind">
-        <div id="b1" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b2" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b3" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b4" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b5" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b6" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b7" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b8" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
-        <div id="b9" class="square" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b1" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b2" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b3" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b4" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b5" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b6" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b7" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b8" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
+        <div id="b9" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
     </div>
-    <h1 id="p1">BROASTED WON!</h1>
-    <h1 id="p2">SHAWERMA WON!</h1>
-    <h1 id="p3">DRAW</h1>
+    <h1 id="winner">Winner</h1>
+    <h1 id="draw">draw</h1>
+
+
     <div id="player1Chars">
 
         <div class="chars" id="Broasted" onclick="charPick(broasted); clickSound()"></div>
@@ -45,9 +46,10 @@
 
     <div id="Player1Char" style="visibility: hidden;" onclick="revretSelection()"></div>
     <div id="Player2Char" style="visibility: hidden;" onclick="revretSelection()"></div>
+    <div></div>
 
 
-    <audio id="click" src="./click.mp3"></audio>
+    <audio id="click" src="./click2.mp3"></audio>
     <script src="./JavaS.js"></script>
 </body>
 

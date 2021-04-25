@@ -28,7 +28,7 @@ let p2Char = {}
 
 const broasted = {
     name: "BROASTED",
-    url: 'broasted.png'
+    url: 'broasted2.png'
 }
 const shawerma = {
     name: "SHAWERMA",
@@ -36,11 +36,11 @@ const shawerma = {
 }
 const burger = {
     name: "BURGER",
-    url: 'burger.png'
+    url: 'burger2.png'
 }
 const zinger = {
     name: "ZINGER",
-    url: 'zinger.png'
+    url: 'zinger2.png'
 }
 const fajita = {
     name: "FAJITA",
@@ -63,6 +63,8 @@ const charPick = (event) => {
 
             Player1Char.style.visibility = "visible"
             player1Chars.style.visibility = "hidden"
+            player2Chars.style.visibility = "visible"
+
             nameCounter = 1
         } else if (nameCounter === 1) {
             p2Char = event
@@ -117,19 +119,35 @@ const checkWinner = () => {
         if (player1.sort().join("").includes(elem.join("")) /*player1 has one of the 3 numbers in win array*/ ) {
             /*alert that player 1 has won (or a big picture ) */
             /*with sound effect */
-
-            p1.style.display = "block"
-            p1.innerText = p1Char.name + "  FOREVER"
+            winner.innerText = p1Char.name + "  FOREVER"
+            winner.style.display = "block"
+            elem.forEach(function(plateId) {
+                setInterval(blink, 300, plateId)
+            })
         }
         if (player2.sort().join("").includes(elem.join("")) /*player2 has one of the 3 numbers in win array*/ ) {
             /*alert that player 2 has won (or a big picture ) */
             /*with sound effect */
+            winner.innerText = p2Char.name + "  FOREVER"
+            winner.style.display = "block"
 
-            p2.style.display = "block"
-            p2.innerText = p1Char.name + "  FOREVER"
         }
-        if (player1.length === 5) {
-            p3.style.display = "block"
+        if (player1.length === 5 && player2.length === 4) {
+            draw.innerText = "DRAW"
+            draw.style.display = "block"
+
         }
     })
+}
+
+
+
+const blink = (plateId) => {
+
+    if (document.getElementById(plateId).style.backgroundColor === "transparent") {
+        document.getElementById(plateId).style.backgroundColor = "green"
+    } else {
+        document.getElementById(plateId).style.backgroundColor = "transparent"
+    }
+
 }
