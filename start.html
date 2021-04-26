@@ -8,25 +8,30 @@
 
 </head>
 
-<body background="./ramadan2.gif">
-    <h1>X O Ramadan Edition</h1>
-    <h2 id="are">Are You Ready?!</h2>
-    <h2 id="hun" style="visibility: hidden;">or HUNGRY??</h2>
-    <hr id="hr" style="visibility: hidden;">
-    <h3 id="think" style="visibility: hidden;">think again...</h3>
+<body background="./ramadan3.gif">
+    <div id="edition">Ramadan Edition</div>
+    <div id="xo">
+        <div id="x">X</div>
+        <div id="o">O</div>
+    </div>
+    <div id="are">Are You Ready?!</div>
+    <div id="hun">If You Are Hungry..</div>
+    <hr id="hr">
+    <div id="think">Think Again...</div>
 
 
-    <button class="startButton" onclick="sure(); clickSound()">
-        <p id="start" style="visibility: visible;"> START</p><a id="cont" href="./index.html"
-            style="visibility: hidden ;">SURE?</a>
+    <button class="startButton" onclick="sure(); clickSound() ">
+        <p id="start" > START</p><a id="cont" href="./index.html"  
+            >SURE?</a>
     </button>
 
-    <audio id="bgsound">
+    <audio id="bgsound" src="./RamadanM.mp3">
 
-        <source src="./RamadanM.mp3">
+        
 
     </audio>
-    <audio id="click" src="./click.mp3"></audio>
+    <audio id="click" src="./click2.mp3"></audio>
+    <audio id="susp" src="./suspense.mp3"></audio>
 
     <div class="soundControl">
         <button class="pp" onclick="playSound()"> play</button>

@@ -2,6 +2,10 @@ function clickSound() {
     click.play()
 }
 
+function failSound() {
+    susp.play()
+}
+
 const sure = () => {
 
     document.getElementById("cont").style.visibility = 'visible'
@@ -9,7 +13,9 @@ const sure = () => {
 
 
     setTimeout(hrV, 500)
-    playSound()
+    setTimeout(playSound, 2600)
+
+    failSound()
 
 }
 
@@ -17,14 +23,14 @@ const hrV = () => {
     document.getElementById("hr").style.visibility = 'visible'
 
 
-    setTimeout(hungryV, 2000)
+    setTimeout(hungryV, 1000)
 
 }
 const hungryV = () => {
     document.getElementById("hun").style.visibility = 'visible'
 
 
-    setTimeout(thinkV, 2000)
+    setTimeout(thinkV, 1000)
 }
 
 const thinkV = () => {
