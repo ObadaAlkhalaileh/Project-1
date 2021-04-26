@@ -65,6 +65,12 @@ const charPick = (event) => {
             player1Chars.style.visibility = "hidden"
             player2Chars.style.visibility = "visible"
 
+            pp1.innerText = p1Char.name
+            pp1.style.visibility = "visible"
+            vs.style.visibility = "visible"
+
+
+
             nameCounter = 1
         } else if (nameCounter === 1) {
             p2Char = event
@@ -76,6 +82,10 @@ const charPick = (event) => {
 
             Player2Char.style.visibility = "visible"
             player2Chars.style.visibility = "hidden"
+
+            pp2.innerText = p2Char.name
+            pp2.style.visibility = "visible"
+
             nameCounter = undefined
         }
 
@@ -119,7 +129,7 @@ const checkWinner = () => {
         if (player1.sort().join("").includes(elem.join("")) /*player1 has one of the 3 numbers in win array*/ ) {
             /*alert that player 1 has won (or a big picture ) */
             /*with sound effect */
-            winner.innerText = p1Char.name + "  FOREVER"
+            winner.innerText = p1Char.name + "    FOREVER!"
             winner.style.display = "block"
             elem.forEach(function(plateId) {
                 setInterval(blink, 300, plateId)
@@ -128,7 +138,7 @@ const checkWinner = () => {
         if (player2.sort().join("").includes(elem.join("")) /*player2 has one of the 3 numbers in win array*/ ) {
             /*alert that player 2 has won (or a big picture ) */
             /*with sound effect */
-            winner.innerText = p2Char.name + "  FOREVER"
+            winner.innerText = p2Char.name + "    FOREVER!"
             winner.style.display = "block"
 
         }

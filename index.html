@@ -8,6 +8,9 @@
 </head>
 
 <body background="./ramadan0.jpg" id="demo">
+
+    <h1 id="winner">Winner</h1>
+    <h1 id="draw">draw</h1>
     <div id="maind">
         <div id="b1" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
         <div id="b2" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
@@ -19,30 +22,32 @@
         <div id="b8" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
         <div id="b9" class="square" style="background-color: transparent;" onclick="changeImage(event); addIdToP1(event); checkWinner(); clickSound()"></div>
     </div>
-    <h1 id="winner">Winner</h1>
-    <h1 id="draw">draw</h1>
+
 
 
     <div id="player1Chars">
 
-        <div class="chars" id="Broasted" onclick="charPick(broasted); clickSound()"></div>
-        <div class="chars" id="Shawerma" onclick="charPick(shawerma); clickSound()"></div>
-        <div class="chars" id="Burger" onclick="charPick(burger); clickSound()"></div>
-        <div class="chars" id="Zinger" onclick="charPick(zinger); clickSound()"></div>
-        <div class="chars" id="Fajita" onclick="charPick(fajita); clickSound()"></div>
-        <div class="chars" id="Mansaf" onclick="charPick(mansaf); clickSound()"></div>
+        <div class="chars" id="BROASTED" onclick="charPick(broasted); clickSound()"></div>
+        <div class="chars" id="SHAWERMA" onclick="charPick(shawerma); clickSound()"></div>
+        <div class="chars" id="BURGER" onclick="charPick(burger); clickSound()"></div>
+        <div class="chars" id="ZINGER" onclick="charPick(zinger); clickSound()"></div>
+        <div class="chars" id="FAJITA" onclick="charPick(fajita); clickSound()"></div>
+        <div class="chars" id="MANSAF" onclick="charPick(mansaf); clickSound()"></div>
 
     </div>
     <div id="player2Chars">
 
-        <div class="chars" id="Broasted" onclick="charPick(broasted); clickSound()"></div>
-        <div class="chars" id="Shawerma" onclick="charPick(shawerma); clickSound()"></div>
-        <div class="chars" id="Burger" onclick="charPick(burger); clickSound()"></div>
-        <div class="chars" id="Zinger" onclick="charPick(zinger); clickSound()"></div>
-        <div class="chars" id="Fajita" onclick="charPick(fajita); clickSound()"></div>
-        <div class="chars" id="Mansaf" onclick="charPick(mansaf); clickSound()"></div>
+        <div class="chars" id="BROASTED" onclick="charPick(broasted); clickSound()"></div>
+        <div class="chars" id="SHAWERMA" onclick="charPick(shawerma); clickSound()"></div>
+        <div class="chars" id="BURGER" onclick="charPick(burger); clickSound()"></div>
+        <div class="chars" id="ZINGER" onclick="charPick(zinger); clickSound()"></div>
+        <div class="chars" id="FAJITA" onclick="charPick(fajita); clickSound()"></div>
+        <div class="chars" id="MANSAF" onclick="charPick(mansaf); clickSound()"></div>
 
     </div>
+    <div id="pp1">player1</div>
+    <div id="pp2">player2</div>
+    <div id="vs">VS</div>
 
     <div id="Player1Char" style="visibility: hidden;" onclick="revretSelection()"></div>
     <div id="Player2Char" style="visibility: hidden;" onclick="revretSelection()"></div>

@@ -4,7 +4,7 @@ body {
 }
 
 #maind {
-    position: relative;
+    position: absolute;
     left: 50%;
     margin-left: -225px;
     height: 550px;
@@ -26,21 +26,26 @@ body {
 }
 
 #winner {
-    position: absolute;
+    position: relative;
     display: none;
     top: 20px;
-    left: 50%;
-    margin-left: -170px;
-    color: white;
+    text-align: center;
+    color: green;
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 7px #ff0, 0 -10px 15px #ff8000, 0 -18px 20px #F00;
 }
 
 #draw {
-    position: absolute;
+    position: relative;
+    text-align: center;
     display: none;
     top: 20px;
     left: 50%;
     margin-left: -50px;
     color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 7px #ff0, 0 -10px 15px #ff8000, 0 -18px 20px #F00;
 }
 
 #player1Chars {
@@ -73,32 +78,32 @@ body {
     width: 150px;
 }
 
-#Broasted {
+#BROASTED {
     background-image: url(./broasted2.png);
     background-size: 150px 150px;
 }
 
-#Shawerma {
+#SHAWERMA {
     background-image: url(./shawerma.png);
     background-size: 150px 150px;
 }
 
-#Burger {
+#BURGER {
     background-image: url(./burger2.png);
     background-size: 150px 150px;
 }
 
-#Zinger {
+#ZINGER {
     background-image: url(./zinger2.png);
     background-size: 150px 150px;
 }
 
-#Fajita {
+#FAJITA {
     background-image: url(./fajita.png);
     background-size: 150px 150px;
 }
 
-#Mansaf {
+#MANSAF {
     background-image: url(./mansaf.png);
     background-size: 150px 150px;
 }
@@ -117,4 +122,38 @@ body {
     right: 3%;
     height: 400px;
     width: 400px;
+}
+
+#pp1 {
+    position: absolute;
+    visibility: hidden;
+    top: 620px;
+    left: 130px;
+    color: white;
+    font-size: 60px;
+    font-family: cursive;
+    text-shadow: 0 -1px 4px #FFF;
+}
+
+#pp2 {
+    position: absolute;
+    visibility: hidden;
+    top: 620px;
+    right: 130px;
+    color: white;
+    font-size: 60px;
+    font-family: cursive;
+    text-shadow: 0 -1px 4px #FFF;
+}
+
+#vs {
+    position: absolute;
+    visibility: hidden;
+    top: 620px;
+    left: 720px;
+    color: white;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 7px #ff0;
+    text-decoration: underline;
 }
