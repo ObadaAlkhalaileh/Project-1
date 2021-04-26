@@ -76,6 +76,10 @@ const charPick = (event) => {
             pp1.innerText = p1Char.name
             pp1.style.visibility = "visible"
 
+            pick1.style.visibility = "hidden"
+            pick2.style.visibility = "visible"
+
+
 
 
 
@@ -94,6 +98,9 @@ const charPick = (event) => {
             pp2.innerText = p2Char.name
             pp2.style.visibility = "visible"
             vs.style.visibility = "visible"
+
+            pick2.style.visibility = "hidden"
+
             let x = document.querySelectorAll(".square")
             console.log(x)
             x.forEach(function(plate) {
@@ -146,28 +153,39 @@ const checkWinner = () => {
             /*alert that player 1 has won (or a big picture ) */
             /*with sound effect */
             winner.innerText = p1Char.name + "    FOREVER!"
-            winner.style.display = "block"
+            winner.style.visibility = "visible"
 
             winning()
             elem.forEach(function(plateId) {
                 setInterval(blink, 300, plateId)
             })
+
+            vs.style.visibility = "hidden"
+            again.style.visibility = "visible"
+
 
         } else if (player2.includes(elem[0]) && player2.includes(elem[1]) && player2.includes(elem[2])) /*player2 has one of the 3 numbers in win array*/ {
             /*alert that player 2 has won (or a big picture ) */
             /*with sound effect */
             winner.innerText = p2Char.name + "    FOREVER!"
-            winner.style.display = "block"
+            winner.style.visibility = "visible"
 
             winning()
             elem.forEach(function(plateId) {
                 setInterval(blink, 300, plateId)
             })
 
+            vs.style.visibility = "hidden"
+            again.style.visibility = "visible"
+
         }
         if (player1.length === 5) {
             draw.innerText = "DRAW"
-            draw.style.display = "block"
+            draw.style.visibility = "visible"
+
+            vs.style.visibility = "hidden"
+            again.style.visibility = "visible"
+
 
         }
     })
@@ -183,4 +201,7 @@ const blink = (plateId) => {
         document.getElementById(plateId).style.backgroundColor = "transparent"
     }
 
+}
+const refresh = () => {
+    window.location.reload()
 }

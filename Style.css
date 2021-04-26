@@ -28,7 +28,7 @@ body {
 
 #winner {
     position: relative;
-    display: none;
+    visibility: hidden;
     top: 20px;
     text-align: center;
     color: green;
@@ -38,13 +38,13 @@ body {
 }
 
 #draw {
-    position: relative;
-    text-align: center;
-    display: none;
+    position: absolute;
+    visibility: hidden;
     top: 20px;
     left: 50%;
-    margin-left: -50px;
-    color: white;
+    margin-left: -70px;
+    color: green;
+    font-size: 60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 7px #ff0, 0 -10px 15px #ff8000, 0 -18px 20px #F00;
 }
@@ -163,4 +163,42 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 7px #ff0;
     text-decoration: underline;
+}
+
+#pick1 {
+    position: absolute;
+    visibility: visible;
+    top: 10%;
+    left: 9%;
+    color: white;
+    font-size: 50px;
+    font-family: fantasy;
+    text-shadow: 0 1px 2px #FFF;
+}
+
+#pick2 {
+    position: absolute;
+    visibility: hidden;
+    top: 10%;
+    right: 9%;
+    color: white;
+    font-size: 50px;
+    font-family: fantasy;
+    text-shadow: 0 1px 2px #FFF;
+}
+
+#again {
+    position: absolute;
+    visibility: hidden;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -160px;
+    color: gold;
+    font-size: 70px;
+    font-family: fantasy;
+    text-shadow: 2px 2px 0 rgb(161, 154, 154), 3px 3px 0 rgb(161, 154, 154), 4px 4px 0 rgb(161, 154, 154);
+}
+
+#again:hover {
+    cursor: pointer;
 }
