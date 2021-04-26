@@ -23,6 +23,7 @@ body {
     background-image: url(./plate.png);
     background-size: 150px 150px;
     background-color: transparent;
+    pointer-events: none;
 }
 
 #winner {
@@ -78,32 +79,38 @@ body {
     width: 150px;
 }
 
-#BROASTED {
+#BROASTED,
+#BROASTED2 {
     background-image: url(./broasted2.png);
     background-size: 150px 150px;
 }
 
-#SHAWERMA {
+#SHAWERMA,
+#SHAWERMA2 {
     background-image: url(./shawerma.png);
     background-size: 150px 150px;
 }
 
-#BURGER {
+#BURGER,
+#BURGER2 {
     background-image: url(./burger2.png);
     background-size: 150px 150px;
 }
 
-#ZINGER {
+#ZINGER,
+#ZINGER2 {
     background-image: url(./zinger2.png);
     background-size: 150px 150px;
 }
 
-#FAJITA {
+#FAJITA,
+#FAJITA2 {
     background-image: url(./fajita.png);
     background-size: 150px 150px;
 }
 
-#MANSAF {
+#MANSAF,
+#MANSAF2 {
     background-image: url(./mansaf.png);
     background-size: 150px 150px;
 }

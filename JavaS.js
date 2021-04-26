@@ -67,7 +67,7 @@ const charPick = (event) => {
 
             pp1.innerText = p1Char.name
             pp1.style.visibility = "visible"
-            vs.style.visibility = "visible"
+
 
 
 
@@ -85,19 +85,26 @@ const charPick = (event) => {
 
             pp2.innerText = p2Char.name
             pp2.style.visibility = "visible"
+            vs.style.visibility = "visible"
+            let x = document.querySelectorAll(".square")
+            console.log(x)
+            x.forEach(function(plate) {
+                plate.style.pointerEvents = "all"
+            })
 
-            nameCounter = undefined
-        }
+            nameCounter = 2
+        } else { return }
+
 
     }
     //need revise(not essential function)
-const revretSelection = () => {
-    //when click on final pick it hide it and remove player 1 selection to start the proccedure again
-    Player1Char.style.visibility = "hidden"
-    player1Chars.style.visibility = "visible"
-    p1Char = {}
+    /*const revretSelection = () => {
+        //when click on final pick it hide it and remove player 1 selection to start the proccedure again
+        Player1Char.style.visibility = "hidden"
+        player1Chars.style.visibility = "visible"
+        p1Char = {}
 
-}
+    }*/
 
 const player1 = []
 const player2 = []
@@ -126,23 +133,27 @@ const win = [
 //WIN FUNCTION
 const checkWinner = () => {
     win.forEach(function(elem, i) {
-        if (player1.sort().join("").includes(elem.join("")) /*player1 has one of the 3 numbers in win array*/ ) {
+        if (player1.includes(elem[0]) && player1.includes(elem[1]) && player1.includes(elem[2])) /*player1 has one of the 3 numbers in win array*/ {
             /*alert that player 1 has won (or a big picture ) */
             /*with sound effect */
             winner.innerText = p1Char.name + "    FOREVER!"
             winner.style.display = "block"
+            console.log(elem)
             elem.forEach(function(plateId) {
                 setInterval(blink, 300, plateId)
             })
-        }
-        if (player2.sort().join("").includes(elem.join("")) /*player2 has one of the 3 numbers in win array*/ ) {
+        } else if (player2.includes(elem[0]) && player2.includes(elem[1]) && player2.includes(elem[2])) /*player2 has one of the 3 numbers in win array*/ {
             /*alert that player 2 has won (or a big picture ) */
             /*with sound effect */
             winner.innerText = p2Char.name + "    FOREVER!"
             winner.style.display = "block"
 
+            elem.forEach(function(plateId) {
+                setInterval(blink, 300, plateId)
+            })
+
         }
-        if (player1.length === 5 && player2.length === 4) {
+        if (player1.length === 5) {
             draw.innerText = "DRAW"
             draw.style.display = "block"
 
