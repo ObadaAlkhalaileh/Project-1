@@ -1,6 +1,14 @@
 function clickSound() {
     click.play()
 }
+
+function gamingSound() {
+    gaming.play()
+}
+
+function winning() {
+    winningPlayer.play()
+}
 let b = document.querySelector("body")
 let imgCounter = 0
 const changeImage = (event) => {
@@ -91,6 +99,7 @@ const charPick = (event) => {
             x.forEach(function(plate) {
                 plate.style.pointerEvents = "all"
             })
+            gamingSound()
 
             nameCounter = 2
         } else { return }
@@ -138,16 +147,19 @@ const checkWinner = () => {
             /*with sound effect */
             winner.innerText = p1Char.name + "    FOREVER!"
             winner.style.display = "block"
-            console.log(elem)
+
+            winning()
             elem.forEach(function(plateId) {
                 setInterval(blink, 300, plateId)
             })
+
         } else if (player2.includes(elem[0]) && player2.includes(elem[1]) && player2.includes(elem[2])) /*player2 has one of the 3 numbers in win array*/ {
             /*alert that player 2 has won (or a big picture ) */
             /*with sound effect */
             winner.innerText = p2Char.name + "    FOREVER!"
             winner.style.display = "block"
 
+            winning()
             elem.forEach(function(plateId) {
                 setInterval(blink, 300, plateId)
             })
