@@ -135,7 +135,7 @@ body {
     position: absolute;
     visibility: hidden;
     top: 620px;
-    left: 130px;
+    left: 7%;
     color: white;
     font-size: 60px;
     font-family: cursive;
@@ -146,7 +146,7 @@ body {
     position: absolute;
     visibility: hidden;
     top: 620px;
-    right: 130px;
+    right: 7%;
     color: white;
     font-size: 60px;
     font-family: cursive;
