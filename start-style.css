@@ -104,6 +104,10 @@ hr {
     box-shadow: 2px 2px 0 rgb(161, 154, 154), 3px 3px 0 rgb(161, 154, 154), 4px 4px 0 rgb(161, 154, 154);
 }
 
+.startButton:hover {
+    color: blue;
+}
+
 #start {
     position: absolute;
     visibility: visible;
