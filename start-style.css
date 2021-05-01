@@ -14,6 +14,10 @@ body {
     text-shadow: 2px 2px 0 rgb(161, 154, 154), 3px 3px 0 rgb(161, 154, 154), 4px 4px 0 rgb(161, 154, 154);
 }
 
+#edition:hover {
+    cursor: default;
+}
+
 #xo {
     position: absolute;
     left: 5%;
@@ -43,6 +47,10 @@ body {
     text-shadow: 2px 2px 0 rgb(161, 154, 154), 3px 3px 0 rgb(161, 154, 154), 4px 4px 0 rgb(161, 154, 154);
 }
 
+#xo:hover {
+    cursor: default;
+}
+
 #are {
     position: relative;
     color: white;
@@ -52,6 +60,10 @@ body {
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 0 rgb(161, 154, 154), 3px 3px 0 rgb(161, 154, 154), 4px 4px 0 rgb(161, 154, 154);
+}
+
+#are:hover {
+    cursor: default;
 }
 
 #hun {
@@ -67,6 +79,10 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+#hun:hover {
+    cursor: default;
+}
+
 #think {
     position: absolute;
     visibility: hidden;
@@ -78,6 +94,10 @@ body {
     font-weight: bold;
     text-align: center;
     ;
+}
+
+#think:hover {
+    cursor: default;
 }
 
 hr {
@@ -106,6 +126,7 @@ hr {
 
 .startButton:hover {
     color: blue;
+    cursor: pointer;
 }
 
 #start {
@@ -149,4 +170,8 @@ a {
     flex-direction: row;
     row-gap: 200px;
     bottom: 0px;
+}
+
+.pp:hover {
+    cursor: pointer;
 }

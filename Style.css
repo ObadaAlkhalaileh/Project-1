@@ -26,6 +26,10 @@ body {
     pointer-events: none;
 }
 
+.square:hover {
+    cursor: pointer;
+}
+
 #winner {
     position: relative;
     visibility: hidden;
@@ -77,6 +81,10 @@ body {
 .chars {
     height: 150px;
     width: 150px;
+}
+
+.chars:hover {
+    cursor: pointer;
 }
 
 #BROASTED,
